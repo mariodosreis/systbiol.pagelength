@@ -16,6 +16,7 @@ i0 <- which(page.length < 0)
 page.length[i0] <- floor(df$first.page[i0] / 100) * 100 + df$last.page[i0] - df$first.page[i0]
 j0 <- which(page.length < 0)
 page.length[j0] <- floor(df$first.page[j0] / 10) * 10 + df$last.page[j0] - df$first.page[j0]
+# (i don't think the above fixes all abbreviations - fix later)
 page.length <- page.length + 1
 
 # mean of page lengths per year:
